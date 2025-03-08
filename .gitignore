@@ -1,22 +1,60 @@
-# Ignore environment variables
-.env
-
-# Ignore Docker build files
-docker-compose.yml
-Dockerfile
-.dockerignore
-
-# Ignore local virtual environments
-env/
-
-# Ignore compiled Python files
+# Ignore Python compiled files
 __pycache__/
 *.py[cod]
 
-# Ignore Django database & migrations
-*/migrations/*
-!*/migrations/__init__.py
+# Ignore virtual environments (Modify this to be more generic)
+env/
+venv/
 
-# Ignore media and static files
+# Ignore environment variables & secrets
+.env
+*.env
+config.json
+
+# Ignore Docker-related files (Only if these should not be committed)
+docker-compose.override.yml
+Dockerfile
+.dockerignore
+
+# Ignore Django database & migrations
+db.sqlite3
+*.sqlite3
+*/migrations/*
+!*/migrations/__init__.py  # Keep __init__.py in migrations
+
+# Ignore log files
+*.log
+logs/
+debug.log
+
+# Ignore IDE/editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore Node.js dependencies (If using React or frontend)
+node_modules/
+npm-debug.log
+
+# Ignore static and media files
 /media/
 staticfiles/
+static/
+
+# Ignore compiled assets (If using webpack or collectstatic)
+*.tar.gz
+*.zip
+
+# Ignore coverage reports (For testing)
+htmlcov/
+.coverage
+*.cover
+pytest_cache/
+
+# Ignore CI/CD artifacts
+junit.xml
+
+# Ignore MAC OS junk files
+.DS_Store
+__MACOSX/
