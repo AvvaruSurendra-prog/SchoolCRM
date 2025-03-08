@@ -1,9 +1,9 @@
 # Ignore environment variables
 .env
-.env.example  # If you use an example env file
 
 # Ignore Docker build files
-docker-compose.override.yml
+docker-compose.yml
+Dockerfile
 .dockerignore
 
 # Ignore local virtual environments
@@ -14,12 +14,9 @@ __pycache__/
 *.py[cod]
 
 # Ignore Django database & migrations
-db.sqlite3
-*.sqlite3
 */migrations/*
 !*/migrations/__init__.py
 
 # Ignore media and static files
 /media/
 staticfiles/
-node_modules/
