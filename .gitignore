@@ -13,7 +13,6 @@ config.json
 
 # Ignore Docker-related files (Only if these should not be committed)
 docker-compose.override.yml
-Dockerfile
 .dockerignore
 
 # Ignore Django database & migrations
